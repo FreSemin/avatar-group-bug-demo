@@ -1,0 +1,36 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="avatar.group.bug.demo.controller.App"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.f"
+    >
+  <Page title="Home">
+    <content>
+      <l:VerticalLayout
+          id="vl1"
+          width="100%"
+          class="sapUiContentPadding"
+          >
+        <Button
+            text="About"
+            press="onGoAboutPage"
+            class="sapUiSmallMarginBottom"
+            />
+        <f:AvatarGroup
+            id="avatarGroup"
+            groupType="Individual"
+            avatarDisplaySize="S"
+            press="onIndividualPress"
+            items="{path: 'items>/content'}"
+            >
+          <f:AvatarGroupItem
+              initials="{items>initials}"
+              fallbackIcon="{items>fallbackIcon}"
+              src="{items>src}"
+              />
+        </f:AvatarGroup>
+      </l:VerticalLayout>
+    </content>
+  </Page>
+</mvc:View>

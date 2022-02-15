@@ -1,0 +1,14 @@
+{
+  "name": "avatar-group-bug-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./webapp/index.html",
+  "scripts": {
+    "start": "ui5 serve --open index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ui5/cli": "^2.14.4"
+  }
+}

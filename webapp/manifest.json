@@ -1,0 +1,86 @@
+{
+	"_version": "1.0.0",
+	"sap.app": {
+		"id": "avatar-group-bug-demo",
+		"type": "application",
+		"i18n": {
+			"bundleUrl": "i18n/i18n.properties",
+			"supportedLocales": [
+				""
+			],
+			"fallbackLocale": ""
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "avatar.group.bug.demo.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.91",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.tnt": {},
+				"sap.m": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "avatar.group.bug.demo.i18n.i18n",
+					"supportedLocales": [
+						""
+					],
+					"fallbackLocale": ""
+				}
+			}
+		},
+		"resources": {},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "avatar.group.bug.demo.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "Home",
+					"target": "home"
+				},
+				{
+					"pattern": "about",
+					"name": "About",
+					"target": "about"
+				}
+			],
+			"targets": {
+				"home": {
+					"viewId": "home",
+					"viewName": "Home"
+				},
+				"about": {
+					"viewId": "about",
+					"viewName": "About"
+				}
+			}
+		}
+	}
+}
